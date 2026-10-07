@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jedis Khitaabs</title>
+<meta name="description" content="Give your Section J classmates a title. Takes about a minute.">
+<meta property="og:title" content="Jedis Khitaabs">
+<meta property="og:description" content="Give your Section J classmates a title. Takes about a minute.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+  <header class="brand">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="11" fill="#c8161d"/><path transform="translate(3 1)" d="M30 10V27a9 9 0 0 1-9 9a9 9 0 0 1-9-9" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round"/></svg>
+    <h1 id="title" tabindex="-1">Jedis Khitaabs</h1>
+  </header>
+
+  <p class="notice" id="setup-notice" role="status" hidden>Setup needed: paste your script URL into <code>config.js</code>. The steps are in DEPLOY.md.</p>
+
+  <main>
+    <section id="view-form" aria-label="Give titles">
+      <p class="lede">Give your classmates a title. Add as many as you like.</p>
+
+      <div class="me">
+        <label class="lbl" for="me-input" id="me-label">Your name <span class="opt">(optional)</span></label>
+        <div id="me-slot"></div>
+        <p class="help">Only the organiser can see it. It also stops you picking yourself.</p>
+      </div>
+
+      <div id="cards"></div>
+      <button type="button" class="ghost" id="add-card"></button>
+    </section>
+
+    <section id="view-done" class="done" aria-live="polite" hidden>
+      <div class="done-icon" aria-hidden="true"></div>
+      <h2 id="done-title" tabindex="-1"></h2>
+      <p class="lede">Thanks. Know more? Add another.</p>
+      <div class="card receipt">
+        <span class="lbl">What you sent</span>
+        <div id="receipt"></div>
+      </div>
+      <button type="button" class="primary" id="more">Add more titles</button>
+      <p class="note"><span class="ico" aria-hidden="true"></span>Other classmates never see what you send.</p>
+    </section>
+  </main>
+</div>
+
+<section class="bar" id="bar" aria-label="Send your titles">
+  <div class="bar-inner">
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <button type="button" class="primary" id="send" disabled><span class="spin" aria-hidden="true"></span><span class="label">Send titles</span></button>
+    <p class="note"><span class="ico" aria-hidden="true"></span>Other classmates never see what you send.</p>
+  </div>
+</section>
+
+<script src="config.js"></script>
+<script src="roster.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
